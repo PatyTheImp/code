@@ -13,6 +13,8 @@
         rel="stylesheet">
     <title>Paty's Gaiden</title>
     <link rel="icon" href="./media/imgs/favicon.png" type="image/png">
+
+    <script src="./script.js" async></script>
 </head>
 
 <body>
@@ -59,7 +61,7 @@
     </section>
 
     <main>
-        <section class="about">
+        <section class="about anim">
             <div class="about-text">
                 <h1>Conheça o nosso mundo</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, quo? Rerum cumque voluptas
@@ -74,21 +76,27 @@
                 <img id="world-map" src="./media/imgs/worl-map.png" alt="world map">
             </div>
         </section>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.</p>
-        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-            Lorem Ipsum.</p>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
-            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-            as opposed to using 'Content here, content here', making it look like readable English.</p>
-        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        
+        <section class="chars anim">
+            <img class="char-bg" src="./media/imgs/char-bg.png" alt="charater background">
+            <h1>Personagens</h1>
+            <div class="char-info">
+                <ul id="char-list">
+                    <li class="active" onclick="charClick(this, 'paty')">Paty</li>
+                    <li onclick="charClick(this, 'neko')">Neko</li>
+                    <li onclick="charClick(this, 'kiku')">Kiku</li>
+                    <li onclick="charClick(this, 'ken')">Ken</li>
+                    <li onclick="charClick(this, 'rei')">Rei</li>
+                    <li onclick="charClick(this, 'kakashi')">Kakashi</li>
+                </ul>
+                <img src="./media/imgs/chars/paty.png" alt="char" id="char-img">
+                <div class="char-desc">
+                    <h1 id="char-title">A lider</h1>
+                    <p id="char-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad cum quod voluptatibus obcaecati possimus deserunt aspernatur eum amet quidem eius similique, odit molestias, nam minus quis? Modi obcaecati error qui?</p>
+                </div>
+            </div>
+        </section>
     </main>
-
 </body>
 
 </html>

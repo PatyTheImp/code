@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Alegreya", serif;
     margin: 0;
@@ -26,6 +30,10 @@ h2 {
     color: #4e3023;
     font-weight: bold;
     text-align: center;
+}
+
+h1 {
+    font-size: 2.4vw;
 }
 
 #background-video {
@@ -228,11 +236,33 @@ main {
     margin-top: 15vh;
 }
 
+.anim {
+    opacity: 0;
+}
+
+.scroll-anim {
+    animation-name: scroll;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+@keyframes scroll {
+    from {
+        filter: blur(2rem);
+        scale: .5;
+    }
+
+    to {
+        filter: blur(0);
+        scale: 1;
+    }
+}
+
 .about {
     display: flex;
     width: 100vw;
     height: 100vh;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -242,7 +272,6 @@ main {
 }
 
 .about-text h1 {
-    font-size: 2.4vw;
     text-align: left;
 }
 
@@ -269,7 +298,7 @@ main {
     -webkit-mask-size: cover;
     mask-size: cover;
     width: 70vw;
-  }
+}
 
 #world-map {
     transition: 1s;
@@ -278,4 +307,111 @@ main {
 
 #world-map:hover {
     scale: 1.2;
+}
+
+.chars {
+    height: 100vh;
+    padding: 5rem;
+}
+
+.char-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    opacity: .5;
+    z-index: -1;
+}
+
+.chars h1 {
+    text-align: left;
+}
+
+.char-info {
+    display: flex;
+    width: 80vw;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+
+.char-info ul {
+    width: 20vw;
+}
+
+.scroll-anim {
+    animation-name: scroll;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+@keyframes scroll {
+    from {
+        filter: blur(2rem);
+        scale: .5;
+    }
+
+    to {
+        filter: blur(0);
+        scale: 1;
+    }
+}
+
+#char-list {
+    list-style-type: none;
+
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: #4e3023;
+}
+
+#char-list li {
+    margin-bottom: .5rem;
+    transition: 1s;
+}
+
+#char-list li:not(.active):hover {
+    margin-left: 1.5vw;
+    cursor: pointer;
+}
+
+.active {
+    scale: 1.5;
+    margin-left: 5vw;
+}
+
+.active::before {
+content: "> ";
+}
+
+#char-img {
+    margin-top: -10vh;
+    height: 80vh;
+    transition: 1s;
+}
+
+#char-img:hover {
+    scale: 1.2;
+}
+
+.char-info .char-desc {
+    width: 20vw;
+}
+
+#char-title {
+    margin-top: 0;
+    transition: 1s;
+}
+
+#char-text {
+    text-align: justify;
+    transition: 1s;
 }
