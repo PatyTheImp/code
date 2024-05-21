@@ -105,6 +105,53 @@ nav a:hover {
     width: 8rem;
 }
 
+.about-banner {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 80vh;
+    align-items: center;
+}
+
+.about-banner-mask {
+    -webkit-mask-image: url(./media/imgs/brush-mask.png);
+    mask-image: url(./media/imgs/brush-mask.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 130%;
+    mask-size: 130%;
+    -webkit-mask-position: 50% 0;
+    mask-position: 50% 100%;
+    width: 100vw;
+}
+
+.about-banner .social {
+    grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: .8rem;
+}
+
+.about-banner h1 {
+    grid-column: 2 / 3;
+    font-size: 3vw;
+}
+
+
+.about-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: center / 100vw no-repeat url(./media/imgs/worl-map.png);
+    z-index: -1;
+  }
+
 .banner-box {
     display: flex;
     width: 100vw;
@@ -555,8 +602,9 @@ input[type='radio'] {
     mask-image: url(./media/imgs/brush-mask.png);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    /* -webkit-mask-size: cover; */
+    -webkit-mask-size: 130%;
     mask-size: 130%;
+    -webkit-mask-position: 50% 0;
     mask-position: 50% 0;
     width: 100vw;
 }
