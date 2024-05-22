@@ -150,7 +150,7 @@ nav a:hover {
     opacity: 0.5;
     background: center / 100vw no-repeat url(./media/imgs/worl-map.png);
     z-index: -1;
-  }
+}
 
 .banner-box {
     display: flex;
@@ -290,6 +290,82 @@ nav a:hover {
 
 main {
     margin-top: 15vh;
+}
+
+.about-main {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.text-img {
+    display: flex;
+    width: min(100vw, 80rem);
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.text-img-mask {
+    -webkit-mask-image: url(./media/imgs/brush-mask.png);
+    mask-image: url(./media/imgs/brush-mask.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    width: 70vw;
+    z-index: -1;
+}
+
+.text-img-mask img {
+    width: 70vw;
+}
+
+.text-box {
+    width: 20vw;
+    background-color: #f0ab5b;
+    padding: 3vw;
+    border-radius: 1vw;
+    box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.4);
+    transition: 1s;
+}
+
+.bottom-right {
+    align-self: flex-end;
+    margin-left: -20vw;
+}
+
+.top-left {
+    align-self: flex-start;
+    margin-right: -20vw;
+}
+
+.top-right {
+    align-self: flex-start;
+    margin-left: -20vw;
+}
+
+.bottom-left {
+    align-self: flex-end;
+    margin-right: -20vw;
+}
+
+.text-box:hover {
+    scale: 1.02;
+    box-shadow: 0 .7rem 1rem 0 rgba(0,0,0,0.3);
+    transform: translateY(-.5rem);
+}
+
+.text-box h1 {
+    font-size: x-large;
+}
+
+hr {
+    border: .1rem solid #4e3023;
+}
+
+.text-box p {
+    text-align: center;
 }
 
 .anim {
