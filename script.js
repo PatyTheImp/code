@@ -2,6 +2,12 @@ const the_animation = document.querySelectorAll('.anim')
 const char_title = document.querySelector('#char-title')
 const char_text = document.querySelector('#char-text')
 const char_img = document.querySelector('#char-img')
+// Get the modal
+const modal = document.querySelector('#myModal');
+// Get the button that opens the modal
+const btn = document.querySelector('#modal-btn');
+// Get the <span> element that closes the modal
+const span = document.querySelector('#close');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -18,7 +24,7 @@ for (let i = 0; i < the_animation.length; i++) {
     const elements = the_animation[i];
 
     observer.observe(elements);
-} 
+}
 
 function charClick(element, charName) {
     let actives = document.querySelectorAll('.active');
@@ -52,10 +58,20 @@ function charClick(element, charName) {
             char_title.innerHTML = "O velhote";
             char_text.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem a minus vitae eveniet quasi doloribus eaque ab ex error itaque cupiditate, ullam laboriosam voluptatum possimus architecto nesciunt veniam soluta eius?";
             break;
-    
+
         default:
             break;
     }
 
     char_img.src = "./media/imgs/chars/" + charName + ".png";
+}
+
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
 }

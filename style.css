@@ -871,12 +871,18 @@ input[type='radio'] {
     position: relative;
 }
 
+.trailer-wrap h1:hover {
+    cursor: pointer;
+    color: #f0ab5b;
+}
+
 .trailer-wrap h1 {
     position: absolute;
     top: 40%;
     width: 100%;
     text-align: center;
     font-size: 5vw;
+    transition: .5s;
 }
 
 #trailer {
@@ -889,6 +895,50 @@ input[type='radio'] {
     z-index: -2;
     opacity: .5;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; /* Stay in place */
+    z-index: 99999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; 
+    
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(255, 255, 255, 0.849);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .modal-content video {
+    height: 90vh;
+  }
+  
+  /* The Close Button */
+  #close {
+    color: #4e3023;
+    align-self: flex-start;
+    font-size: 4rem;
+    font-weight: bold;
+    transition: .5s;
+  }
+  
+  #close:hover,
+  #close:focus {
+    color: #f0ab5b;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 .game-cards {
     display: flex;
