@@ -8,6 +8,7 @@ const modal = document.querySelector('#myModal');
 const btn = document.querySelector('#modal-btn');
 // Get the <span> element that closes the modal
 const span = document.querySelector('#close');
+const modalVid = document.querySelector('#modal-vid');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -74,4 +75,5 @@ btn.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     modal.style.display = "none";
+    modalVid.pause();
 }
