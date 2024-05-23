@@ -105,7 +105,8 @@ nav a:hover {
     width: 8rem;
 }
 
-.about-banner {
+.about-banner,
+.update-banner {
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -126,7 +127,8 @@ nav a:hover {
     width: 100vw;
 }
 
-.about-banner .social {
+.about-banner .social,
+.update-banner .social {
     grid-column: 1 / 2;
 }
 
@@ -136,7 +138,8 @@ nav a:hover {
 }
 
 
-.about-banner::before {
+.about-banner::before,
+.update-banner::before {
     content: "";
     position: absolute;
     top: 0;
@@ -146,6 +149,43 @@ nav a:hover {
     opacity: 0.5;
     background: center / 100vw no-repeat url(./media/imgs/worl-map.png);
     z-index: -1;
+}
+
+.update-banner::before {
+    background: center / 100vw no-repeat url(./media/imgs/news/4.png);
+}
+
+.main-post {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.blog-post {
+    text-align: justify;
+    max-width: min(50rem, 90vw);
+    color: #4e3023;
+}
+
+.blog-post h1 {
+    text-align: justify;
+}
+
+.blog-post a {
+    text-align: center;
+    text-decoration: underline;
+    color: #4e3023;
+    font-weight: 700;
+    font-size: 1.5vw;
+    transition: .5s;
+}
+
+.blog-post a:hover {
+    color: #f0ab5b;
 }
 
 .news-banner {
@@ -275,6 +315,20 @@ nav a:hover {
     scale: 1.2;
 }
 
+.news-header {
+    text-align: center;
+}
+
+.news-header h1 {
+    font-size: 4vw;
+    margin-bottom: 0;
+}
+
+.news-header h3 {
+    font-size: 2vw;
+    color: #4e3023;
+}
+
 .banner-box {
     display: flex;
     width: 100vw;
@@ -285,6 +339,7 @@ nav a:hover {
 
 .banner-box .social,
 .about-banner .social,
+.update-banner .social,
 .news-banner .social {
     display: flex;
     flex-direction: column;
@@ -293,6 +348,7 @@ nav a:hover {
 
 .banner-box .social .svg-logo,
 .about-banner .social .svg-logo,
+.update-banner .social .svg-logo,
 .news-banner .social .svg-logo {
     margin-bottom: .5rem;
 }
@@ -797,6 +853,71 @@ input[type='radio'] {
 
 .slide-show input:nth-of-type(6):checked~#carousel {
     --position: 6;
+}
+
+.trailer-mask {
+    -webkit-mask-image: url(./media/imgs/brush-mask.png);
+    mask-image: url(./media/imgs/brush-mask.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100%;
+    mask-size: 130%;
+    -webkit-mask-position: 50% 50%;
+    mask-position: 50% 50%;
+    width: 100vw;
+}
+
+.trailer-wrap {
+    position: relative;
+}
+
+.trailer-wrap h1 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 5vw;
+}
+
+#trailer {
+    width: 130%;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+    opacity: .5;
+}
+
+.game-cards {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.card {
+    width: 15vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 1vw;
+    margin-left: 1.5vw;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-.5rem);
+}
+
+.game-cards:has(.card:hover) .card:not(:hover) {
+    filter: blur(4px)
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .foot-mask {
